@@ -1,12 +1,12 @@
-algoritmo "C·lculo de emprÈstimo"
+algoritmo "C√°lculo de empr√©stimo"
 var
-   emprestimo, parcelas, valor, valor_parcela: Real
+   emprestimo, parcelas, valor: Real
 inicio
-      Escreval ("O valor do juros s„o de 20%")
-      Escreva ("Qual o valor do emprÈstimo? ")
+      Escreval ("O valor do juros s√£o de 20%")
+      Escreva ("Qual o valor do empr√©stimo? ")
       Leia (emprestimo)
       Escreva ("Quantas parcelas? ")
       leia (parcelas)
       valor <- emprestimo * 20 / parcelas
-      Escreva ("VocÍ vai pagar", parcelas, " parcelas de ", valor, "R$")
+      Escreva ("Voc√™ vai pagar", parcelas, " parcelas de ", valor, "R$")
 fimalgoritmo
