@@ -1,39 +1,53 @@
-algoritmo "Jogo de futebol"
+algoritmo "Partida de Futebol"
 var
    Time1, Time2: Caractere
-   Qtde_Gols1, Qtde_Gols2, Diferenca_Gols: Inteiro
+   Gols1, Gols2, Dif: Inteiro
 inicio
-      Escreval ("---------------------------------")
-      Escreval ("         JOGO DE FUTEBOL         ")
-      Escreval ("---------------------------------")
-      Escreva ("Qual é o time da casa? ")
+      Escreval ("--------------------------------------")
+      Escreval ("           JOGO DE FUTEBOL            ")
+      Escreval ("--------------------------------------")
+      Escreval ("")
+      Escreva ("Qual é o nome do time da casa? ")
       Leia (Time1)
-      Escreva ("Qual é o time de fora? ")
+      Escreva ("Qual é o nome do time de fora? ")
       Leia (Time2)
       Escreva ("Quantos gols o ", Time1, " fez? ")
-      Leia (Qtde_Gols1)
+      Leia (Gols1)
       Escreva ("Quantos gols o ", Time2, " fez? ")
-      Leia (Qtde_Gols2)
-      Diferenca_Gols <- (Qtde_Gols1 - Qtde_Gols2)
-      Se (Diferenca_Gols >= 4) entao
-      Escreval ("------------------------------------------")
-      Escreval ("   DIFERENÇA DE GOLS:", Diferenca_Gols)
-      Escreval ("   STATUS: GOLEADA")
-      Escreval ("------------------------------------------")
-      senao
-           Se (Diferenca_Gols > 0) e (Diferenca_Gols < 4) entao
-              Escreval ("------------------------------------------")
-              Escreval ("   DIFERENÇA DE GOLS:", Diferenca_Gols)
-              Escreval ("   STATUS: PARTIDA NORMAL")
-              Escreval ("------------------------------------------")
+      Leia (Gols2)
+      Dif <- (Gols1 - Gols2)
+      Se (Dif >= 4) entao
+         Escreval ("------------------------------------")
+         Escreval ("      ", Time1, " VS ", Time2, "      ")
+         Escreval ("       Gols:", Gols1, "       Gols:", Gols2)
+         Escreval ("STATUS: GOLEADA")
+      Senao
+           Se (Dif >= 1) e (Dif < 4) entao
+              Escreval ("------------------------------------")
+              Escreval ("      ", Time1, " VS ", Time2, "      ")
+              Escreval ("       Gols:", Gols1, "       Gols:", Gols2)
+              Escreval ("STATUS: PARTIDA NORMAL")
            Senao
-                Se (Diferenca_Gols = 0) entao
-                Escreval ("------------------------------------------")
-                Escreval ("   DIFERENÇA DE GOLS:", Diferenca_Gols)
-                Escreval ("   STATUS: EMPATE")
-                Escreval ("------------------------------------------")
+                Se (Dif = 0) entao
+                   Escreval ("------------------------------------")
+                   Escreval ("      ", Time1, " VS ", Time2, "      ")
+                   Escreval ("       Gols:", Gols1, "       Gols:", Gols2)
+                   Escreval ("STATUS: EMPATE")
                 Fimse
            Fimse
+      Fimse
+      Se (Gols1 > Gols2) entao
+         Escreval (Time1, " venceu ", Time2)
+         Escreval ("------------------------------------")
+      Senao
+           Se (Gols1 < Gols2) entao
+              Escreval (Time2, " venceu ", Time1)
+              Escreval ("------------------------------------")
+           Senao
+                Se (Gols1 = Gols2) entao
+                  Escreval ("Ninguém venceu ninguém")
+                  Escreval ("------------------------------------")
+                FimSe
+           FimSe
       FimSe
-      
 fimalgoritmo
