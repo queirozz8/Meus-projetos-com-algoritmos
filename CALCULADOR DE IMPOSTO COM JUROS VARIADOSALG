@@ -1,4 +1,4 @@
-algoritmo "Calculador de imposto 2.0"
+algoritmo "Calculador de imposto com juros variados"
 var
    Valor_produto, Juros, Valor_total :Real
 inicio
