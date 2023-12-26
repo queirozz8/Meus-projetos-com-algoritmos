@@ -7,16 +7,16 @@ inicio
       Escreval ("           JOGO DE FUTEBOL            ")
       Escreval ("--------------------------------------")
       Escreval ("")
-      Escreva ("Qual é o nome do time da casa? ")
+      Escreva ("Qual Ã© o nome do time da casa? ")
       Leia (Time1)
-      Escreva ("Qual é o nome do time de fora? ")
+      Escreva ("Qual Ã© o nome do time de fora? ")
       Leia (Time2)
       Escreva ("Quantos gols o ", Time1, " fez? ")
       Leia (Gols1)
       Escreva ("Quantos gols o ", Time2, " fez? ")
       Leia (Gols2)
       Dif <- (Gols1 - Gols2)
-      Se (Dif >= 4) entao
+      Se (Dif >= 4) ou (Dif <= -4) entao
          Escreval ("------------------------------------")
          Escreval ("      ", Time1, " VS ", Time2, "      ")
          Escreval ("       Gols:", Gols1, "       Gols:", Gols2)
@@ -45,7 +45,7 @@ inicio
               Escreval ("------------------------------------")
            Senao
                 Se (Gols1 = Gols2) entao
-                  Escreval ("Ninguém venceu ninguém")
+                  Escreval ("NinguÃ©m venceu ninguÃ©m")
                   Escreval ("------------------------------------")
                 FimSe
            FimSe
